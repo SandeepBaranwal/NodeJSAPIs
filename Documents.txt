@@ -1,0 +1,204 @@
+** We cannot use session in nodejs
+/************************Session 1 Start***********************/
+
+....... server.js ----------
+/** Server setup is here */
+
+const http = require('http');
+const app = require('./app');
+const port = process.env.port || 3000;
+const server = http.createServer(app);
+
+
+server.listen(port);
+
+console.log('server is listening');
+
+
+....... app.js -----------
+var app =express();
+
+app.use((req,res,next)=>{
+    res.status(200).json({
+        message:'It works!'
+    });
+});
+
+module.exports = app;
+/************************Session 2 End***********************/
+
+/************************Session 3 Start***********************/
+........ api/routes/products.js ----------------------------
+const express = require('express');
+const router = express.Router();
+
+router.get('/',(req,res,next)=>{
+    res.status(200).json({
+        message:`Handing get request to product`
+    });
+});
+
+router.post('/',(req,res,next)=>{
+    res.status(201).json({
+        message:`Handing post request to product`
+    });
+});
+
+router.get('/:productId',(req,res,next)=>{
+    const id = req.params.productId;
+    if(id ==='special')
+    {
+        res.status(200).json({
+            message:`You discoverd the product id ${id}`,
+            id :id
+        });
+    }    
+    else
+    {
+        res.status(200).json({
+            message:`product id not identified`
+        });
+    }
+});
+
+router.patch('/:productId',(req,res,next)=>{
+    res.status(200).json({
+        message:`Update product`,
+    });
+});
+
+router.delete('/:productId',(req,res,next)=>{
+    res.status(200).json({
+        message:`Delete product`,
+    });
+});
+
+module.exports = router;
+
+........ api/routes/orders.js ----------------------------
+const express = require('express');
+const router = express.Router();
+
+router.get('/',(req,res,next)=>{
+    res.status(200).json({
+        message: 'order fetched'
+    });
+});
+
+
+router.post('/',(req,res,next)=>{
+    res.status(201).json({
+        message: 'order created'
+    });
+});
+
+router.get('/:orderId',(req,res,next)=>{
+    res.status(200).json({
+        message: 'order details',
+        orderid: req.params.orderId
+    });
+});
+
+router.delete('/:orderId',(req,res,next)=>{
+    res.status(200).json({
+        message: 'order deleted',
+        orderid : req.params.orderId
+    });
+});
+
+module.exports = router;
+
+
+............... app.js ----------------------------------
+var express = require('express');
+var app =express();
+
+const productroute = require('./api/routes/products');
+const orderroute = require('./api/routes/orders');
+
+app.use('/orders',orderroute);
+app.use('/products',productroute);
+
+module.exports = app;
+
+.............. server.js ---------------------------------
+/** Server setup is here */
+
+const http = require('http');
+const app = require('./app');
+const port = process.env.port || 3000;
+const server = http.createServer(app);
+
+
+server.listen(port);
+
+console.log('server is listening');
+
+/************************Session 3 End***********************/
+
+
+/************************Session 4 start***********************/ 
+
+npm install --save-dev nodemon
+npm install --save morgan
+
+const express = require('express');
+const app =express();
+const morgan = require('morgan');
+
+const productroute = require('./api/routes/products');
+const orderroute = require('./api/routes/orders');
+
+
+app.use(morgan('dev'));
+app.use('/orders',orderroute);
+app.use('/products',productroute);
+
+app.use((req,res,next)=>{
+    const error = new Error('Not found');
+    error.status=400;
+    next(error);
+});
+
+app.use((error,req,res,next)=>{
+    res.status(error.status || 500);
+    res.json({
+        error:{
+            message: error.message,
+            errorCode : error.status
+        }
+    });
+});
+
+module.exports = app;
+
+/************************Session 4 End***********************/
+
+/************************Session 5 Start***********************/
+npm install --save body-parser
+-- body-parser does not support file but it support JSON , url encoded and body.
+-- To resolve CORES erro : to access api from any server we have to pass some information in header. and this can be written in app.js as below
+
+/** Add below in app.js file **/
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
+
+**
+ * To avoid CORS (Cross origin resource sharing)
+ * CORS security mechanism only apply on browser, not on any tool tike postman
+ */
+app.use((req,res,next)=>{
+    //res.header("Access-Control-Allow-Origin","www.travelex.com/login");
+    res.header("Access-Control-Allow-Origin","*");
+    res.header("Access-Control-Allow-Header","Origin, X-Requested-With, Content-Type, Accept, Authorization");
+    if(req.method==="OPTIONS"){
+        res.header("Access-Control-Allow-Methods","GET,PUT,PATCH,POST,DELETE");
+        return res.status(200).json({});
+    }
+    next();
+})
+
+/************************Session 5 End***********************/
+npm install --save mongoose
