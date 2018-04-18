@@ -1,9 +1,12 @@
 const express = require('express');
 const router = express.Router();
+const mongoose = require('mongoose');
+const Order = require('../Model/orders');
 
 router.get('/',(req,res,next)=>{
     res.status(200).json({
-        message: 'order fetched'
+        message: 'order fetched',
+        data: res.data
     });
 });
 
