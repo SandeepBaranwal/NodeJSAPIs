@@ -1,10 +1,701 @@
-<html>
-    <head>
-        <title> Startup page</title>
-    </head>
-    <body>
-        <H2> Welcome to Test page...</H2>
+<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">
+<html lang=\ "en\">
 
-        <p>This is a test file. we are reading this in code.</p>
-    </body>
+<head>
+    <meta content=\ "text/html; charset=UTF-8\" http-equiv=\ "Content-Type\">
+    <meta content=\ "initial-scale=1.0\" name=\ "viewport\">
+    <!-- So that mobile webkit will display zoomed in -->
+    <meta content=\ "telephone=no\" name=\ "format-detection\">
+    <!-- disable auto telephone linking in iOS -->
+    <title></title>
+    <style type=\ "text/css\">
+          * {
+             font-family: Arial, Helvetica, sans-serif;
+            
+        }
+
+        
+        /* Resets: see reset.css for details */
+
+         .ReadMsgBody {
+             width: 100%;
+             background-color: #ebebeb;
+            
+        }
+
+         .ExternalClass {
+             width: 100%;
+             background-color: #ebebeb;
+            
+        }
+
+         .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+             line-height: 100%;
+            
+        }
+
+         body {
+             -webkit-text-size-adjust: none;
+             -ms-text-size-adjust: none;
+            
+        }
+
+         body {
+             margin: 0;
+             padding: 0;
+            
+        }
+
+         table {
+             border-spacing: 0;
+            
+        }
+
+         table td {
+             border-collapse: collapse;
+            
+        }
+
+         .yshortcuts a {
+             border-bottom: none !important;
+            
+        }
+
+         .footer a {
+             color: #ffffff !important;
+            
+        }
+
+         .from600table {
+             display: none !important;
+             font-size: 0;
+             max-height: 0;
+             line-height: 0;
+            
+        }
+
+        
+        /* Constrain email width for small screens */
+
+         @media screen and (max-width: 600px) {
+             table[class=\"container\"], table[class=\"remove-padding600\"], #logo {                width: 95% !important;            }        }        /*@media only screen and (min-device-width: 480px) and (max-device-width: 1060px) {                       table[class=\"col-2\"] {                           width: 50% !important;                       }                   }*/        /* Give content more room on mobile */        @media screen and (max-width: 480px) {            td[class=\"container-padding\"] {                padding-left: 12px !important;                padding-right: 12px !important;            }        }        /* Styles for forcing columns to rows */        @media only screen and (min-width : 600px) {            .nav {                display: table-cell !important;            }        }        @media only screen and (max-width : 600px) {            table[class=\"remove-padding600\"] {                width: 95% !important;                padding: 0 !important;            }            .hiding {                max-height: inherit !important;                width: auto !important;                overflow: visible !important;            }            *[class=hidingForMobile] {                max-height: 20px !important;                width: 0 !important;                overflow: hidden !important;            }            .upsell {                width: 100% !important;                height: auto;            }            td[class=\"remove-padding600\"] {                padding: 0 !important;            }            td [class=\"remove-padding600\"] &gt;            table &gt;            tbody &gt;            tr &gt;            td {                padding: 0 !important;            }            table[class=\"col-3\"] {                /* unset table align=\"left/right\" */                float: none !important;                width: 100% !important;                /* change left/right padding and margins to top/bottom ones */                margin-bottom: 12px;                padding-bottom: 12px;            }            /* remove bottom border for last column/row */            table[id=\"last-col-3\"] {                border-bottom: none !important;                margin-bottom: 0;            }            /* align images right and shrink them a bit */            img[class=\"col-3-img\"] {                float: right;                margin-left: 6px;                max-width: 130px;            }            .from600 {                display: block !important;            }            .from600table {                display: table !important;                font-size: normal;                max-height: none;                line-height: normal;            }            .change-on600 {                border-color: #7c7c7c !important;            }            .align-right600 {                text-align: right !important;                width: 100% !important;                display: block;            }            /* force container columns to (horizontal) blocks */            td[class=\"force-col\"] {                display: block;                width: 100% !important;                padding-right: 0 !important;                padding-left: 0 !important;                border: 0 !important;            }            table[class=\"force-row\"] {                width: 100%;            }                table[class=\"force-row\"] tr {                    display: table-cell !important;                    width: 100% !important;                    padding: 0 !important;                    border: 0 !important;                }                table[class=\"force-row\"] td {                    padding: 0 !important;                    line-height: 3;                }            table[class=\"col-2\"] {                /* unset table align=\"left/right\"                               float: none !important; */                width: 100% !important;                /* change left/right padding and margins to top/bottom ones */                margin-bottom: 12px;                padding-bottom: 12px;            }            table[class=\"columns-container\"] {                border: 0 !important;            }            /* remove bottom border for last column/row */            table[id=\"last-col-2\"] {                border-bottom: none !important;                margin-bottom: 0;            }            /* align images right and shrink them a bit */            img[class=\"col-2-img\"] {                float: right;                margin-left: 6px;                max-width: 130px;            }            .no-padding600 {                padding: 0 !important;            }            .no-width600 {                width: 0 !important;            }            *[class=display-none600] {                display: none !important;            }            .btn {                padding-top: 10px !important;                padding-right: 0 !important;                padding-bottom: 10px !important;                padding-left: 0 !important;                width: 100% !important;                text-align: center;                font-size: 20px !important;            }            td[class=\"mobile-btn\"] {                display: block;                clear: both;            }        }        /* iPhone 5 */        @media only screen and (min-width : 320px) and (max-width : 568px) {            .font-change {                font-size: 21px !important;            }        }
+    </style>
+    <!--[if gte mso 9]>    <style>     td, a, span, li {         font-family: Arial, Helvetica, sans-serif;     }     </style>    <![endif]--></head>
+
+<body bgcolor=#e8e8e8 style=\ "margin: 0; padding: 0;\">
+    <table width=\ "100%\" height=\ "100%\" cellspacing=\ "0\" cellpadding=\ "0\" border=\ "0\" bgcolor=\ "#e8e8e8\" style=\
+        "word-break:normal;\">
+        <tbody>
+            <tr>
+                <td style=\ "font-size: 11px; color: #787878 ; text-align: center;\"> Having trouble viewing this email? Please
+                    <a style=\
+                        "font-weight: bold;\n                        font-size: 11px; color: #3983ce; text-decoration: none; line-height: 1.5;\" href=\
+                        "https://localhost:53860/us/Email/View?orderRefNumber=US80032725&emailType=CustomerOrderConfirmationHomeDelivery&token=7C24DA9B110F16BAB6D45336064B45E69A36D5728D0393DBE4FA6AA04B40B45B\">\n click here</a> </td> </tr>
+            <tr>\n
+                <td valign=\ "top\" bgcolor=\ "#e8e8e8\" align=\ "center\" style=\ "background-color: #e8e8e8;\">\n
+                    <table cellspacing=\ "0\" cellpadding=\ "0\" border=\ "0\" bgcolor=\ "#e8e8e8\" class=\ "container\"\n
+                        style=\ "table-layout: fixed; width: 600px;\">\n
+                        <tbody>\n
+                            <tr>\n
+                                <td align=\ "center\" style=\ "padding-top: 20px; padding-bottom: 20px;\">\n
+                                    <table style=\ "width: 100%;\" class=\ "container-padding\">\n
+                                        <tbody>\n
+                                            <tr>\n
+                                                <td width=\ "10\">\n </td>\n
+                                                <td align=\ "left\">\n
+                                                    <a style=\ "display: block;\" id=\ "logo\" href=\ "#\">\n
+                                                        <img alt=\ "Travelex\" style=\ "border: 0;max-width:100%;\" src=\
+                                                            "http://localhost/img/Email/logo.gif\"/>
+                                                    </a>\n </td>\n
+                                                <td width=\ "10\">\n </td>\n
+                                                <!-- <td></td> -->\n </tr>\n </tbody>\n </table>\n </td>\n </tr>\n </tbody>\n </table>\n </td>\n
+                </tr>
+            <tr height=\ "15\">
+                <td height=\ "15\"></td> </tr>
+            <tr>\n
+                <td align=\ "center\" valign=\ "top\" bgcolor=\ "#ebebeb\" style=\ "background-color: #e8e8e8;\">\n
+                    <!-- 1060px container (white background) -->\n
+                    <table border=\ "0\" cellpadding=\ "0\" cellspacing=\ "0\" class=\ "container\" bgcolor=\
+                        "#ffffff\" style=\ "table-layout: fixed; text-align: left; width: 600px;\">\n
+                        <tbody>
+                            <tr>\n
+                                <td class=\ "container-padding\" bgcolor=\ "#ffffff\" style=\
+                                    "padding-left: 20px; padding-right: 20px; padding-top: 20px;\">\n
+                                    <table width=\ "100%\" cellpadding=\ "0\" cellspacing=\ "0\">\n
+                                        <tbody>
+                                            <tr>\n
+                                                <td width=\ "55\">
+                                                    <img src=\ "http://localhost/img/Email/icon-thumb.png\" width=\ "46\" height=\
+                                                        "46\" alt=\ "\">
+                                                </td>\n
+                                                <td style=\ "font-size: 24px; color: #ed1c2e;\" class=\ "font-change\">Your order has been confirmed - US80032725</td>\n </tr>\n
+                                            <tr height=\
+                                                "10\">\n
+                                                <td colspan=\ "2\" style=\
+                                                    "border-bottom-color: #e8e8e8; border-bottom-width: 1px; border-bottom-style: solid;\"></td>\n </tr>\n
+                                            <tr height=\ "10\">\n
+                                                <td colspan=\ "2\">
+                                                    <!--[if lte mso 11]><div style=\"border-bottom-color: #e8e8e8; border-bottom-width: 1px; border-bottom-style: solid;\"></div><![endif]-->
+                                                </td>\n </tr>\n </tbody>
+                                    </table>\n </td>\n </tr>\n
+                            <tr height=\ "25\" style=\
+                                "height: 25px; margin-bottom: 20px; line-height: 1.3;\">\n
+                                <td class=\ "container-padding\" style=\
+                                    "padding-left: 20px; padding-right: 20px;  font-size: 16px; color: #787878;\">\n Hi Ceryl,
+                                    <br>
+                                    <br>\nWe've successfully processed your order and we're packing it now and getting it ready
+                                    for delivery. Your order details are below - if you have any questions please reply to
+                                    this email or call us at 516-300-1622.
+                                    <br>
+                                    <br>Have a great trip!
+                                    <br>
+                                    <br> \n </td>\n </tr>\n </tbody>
+                    </table>\n </td>\n </tr>
+            <tr height=\ "15\">
+                <td height=\ "15\"></td></tr>
+            <tr>
+                <td valign=\ "top\" align=\ "center\">
+                    <!-- 1060px container (white background) Your details -->
+                    <table cellspacing=\ "0\" cellpadding=\ "0\" border=\ "0\" bgcolor=\ "#ffffff\" style=\
+                        "table-layout: fixed; text-align: left; width: 600px;\" class=\ "container\">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <table width=\ "100%\" cellpadding=\ "10\" bgcolor=\ "#004fa3\">
+                                        <tbody>
+                                            <tr>
+                                                <td width=\ "3%\">
+                                                    <img width=\ "22\" height=\ "15\" alt=\ "\" src=\
+                                                        "http://localhost/img/Email/details.gif\"> </td>
+                                                <td width=\ "95%\" style=\
+                                                    "font-size: 18px; color: #ffffff;\">Your Details </td> </tr> </tbody> </table> </td>
+                                </tr>
+                            <tr>
+                                <td>
+                                    <table cellspacing=\ "0\" cellpadding=\ "0\" border=\ "0\" style=\ "width: 100%;\" class=\
+                                        "columns-container\">
+                                        <tbody>
+                                            <tr>
+                                                <td width=\ "100%\" style=\
+                                                    "padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px;\" class=\ "container-padding\">
+                                                    <table width=\ "100%\">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width=\ "30%\" valign=\ "top\" class=\ "force-col\">
+                                                                    <!-- ### COLUMN 1 ### -->
+                                                                    <table width=\ "100%\" cellspacing=\ "0\" cellpadding=\
+                                                                        "0\" border=\ "0\" align=\ "left\" class=\ "col-3\">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td valign=\ "bottom\" align=\ "left\" style=\
+                                                                                    "font-size: 14px; line-height: 1.4;\">
+                                                                                    <table width=\ "100%\" style=\
+                                                                                        "table-layout: fixed;\">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td width=\ "25\">
+                                                                                                    <img width=\ "20\" height=\
+                                                                                                        "14\" alt=\ "\" src=\
+                                                                                                        "http://localhost/img/Email/passport.gif\"> </td>
+                                                                                                <td style=\
+                                                                                                    "font-size: 13px; color: #787878; white-space: nowrap;\"> Contact information
+                                                                                                    </td> </tr>
+                                                                                            <tr
+                                                                                                height=\ "10\">
+                                                                                                <td style=\
+                                                                                                    "border-bottom-color: #e8e8e8; border-bottom-width: 1px; border-bottom-style: solid;\" colspan=\ "2\"></td>  </tr>
+                                                                            <tr
+                                                                                height=\ "10\">
+                                                                                <!--<td colspan=\"2\">                                                                                        [if lte mso 11]><div style=\"border-bottom-color: transparent; border-bottom-width: 1px; border-bottom-style: solid;\"></div><![endif]                                                                                    </td>--> </tr> </tbody> </table>
+                                                            </td> </tr>
+                                            <tr>
+                                                <td style=\
+                                                    "font-size: 14px; color: #787878; line-height: 1.4; word-break: break-all;\"> Miss. Ceryl Accept
+                                                    <br />2322334222
+                                                    <br />sandeep.baranwal@travelex.com </td> </tr>
+                                            <tr height=\
+                                                "10\">
+                                                <td></td> </tr> </tbody> </table> </td>
+                                            <td width=\ "10\"
+                                                class=\ "display-none600\"></td>
+                                            <!-- </tr>                                                <tr> -->
+                                            <td valign=\ "top\" class=\ "force-col\">
+                                                <!-- ### COLUMN 2 ### -->
+                                                <table width=\ "100%\" cellspacing=\ "0\" cellpadding=\ "0\" border=\
+                                                    "0\" align=\ "left\" class=\ "col-3\">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td valign=\ "bottom\" align=\ "left\" style=\
+                                                                "font-size: 13px; line-height: 1.4;\">
+                                                                <table width=\ "100%\" style=\ "table-layout: fixed;\">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td width=\ "25\">
+                                                                                <img width=\ "22\" height=\ "12\" alt=\
+                                                                                    "\" src=\
+                                                                                    "http://localhost/img/Email/billing.gif\"> </td>
+                                                                            <td style=\
+                                                                                "font-size: 13px; color: #787878; white-space: nowrap;\"> Billing &amp; delivery address
+                                                                                </td> </tr>
+                                                                        <tr height=\ "10\">
+                                                                            <td style=\
+                                                                                "border-bottom-color: #e8e8e8; border-bottom-width: 1px; border-bottom-style: solid;\" colspan=\ "2\"></td>  </tr>
+                                                                        <tr height=\ "10\">
+                                                                            <!--<td colspan=\"2\">                                                                                        [if lte mso 11]><div style=\"border-bottom-color: transparent; border-bottom-width: 1px; border-bottom-style: solid;\"></div><![endif]                                                                                    </td>--> </tr> </tbody> </table> </td>
+                                                            </tr>
+                                                        <tr>
+                                                            <td style=\
+                                                                "font-size: 14px; color: #787878; line-height: 1.4; word-break: break-word;\"> \n 100 m
+                                                                <br/>test
+                                                                <br/>dallas
+                                                                <br/>23443\n  </td> </tr>
+                                                        <tr height=\ "10\">
+                                                            <td></td> </tr> </tbody> </table> </td>
+                                            <td width=\
+                                                "10\" class=\ "display-none600\"></td>
+                                            <!-- </tr>                                                <tr> -->
+                                            <td width=\ "30%\" valign=\ "top\" class=\ "force-col\">
+                                                <!-- ### COLUMN 3 ### -->
+                                                <table width=\ "100%\" cellspacing=\ "0\" cellpadding=\ "0\" border=\
+                                                    "0\" align=\ "left\" id=\ "last-col-3\" class=\ "col-3\">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td valign=\ "bottom\" align=\ "left\" style=\
+                                                                "font-size: 14px; line-height: 1.4;\">
+                                                                <table width=\ "100%\" style=\ "table-layout: fixed;\">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td width=\ "25\">
+                                                                                <img width=\ "19\" height=\ "14\" alt=\
+                                                                                    "\" src=\
+                                                                                    "http://localhost/img/Email/credit.gif\"> </td>
+                                                                            <td style=\
+                                                                                "font-size: 13px; color: #787878; white-space: nowrap;\"> Payment method </td> </tr>
+                                                                        <tr
+                                                                            height=\ "10\">
+                                                                            <td style=\
+                                                                                "border-bottom-color: #e8e8e8; border-bottom-width: 1px; border-bottom-style: solid;\" colspan=\ "2\"></td>  </tr>
+                                                        <tr height=\ "10\">
+                                                            <!--<td colspan=\"2\">                                                                                        [if lte mso 11]><div style=\"border-bottom-color: transparent; border-bottom-width: 1px; border-bottom-style: solid;\"></div><![endif]                                                                                    </td>--> </tr> </tbody> </table> </td> </tr>
+                            <tr>
+                                <td style=\
+                                    "font-size: 14px; color: #787878; line-height: 1.4; word-break: break-word;\"> Visa
+                                    <br /> xxxx-xxxx-xxxx-1111
+                                    <br /> Exp: 11/26 </td> </tr> </tbody> </table> </td> </tr>
+            </tbody> </table> </td> </tr> </tbody> </table>
+            <!--/ end .columns-container--> </td> </tr> </tbody> </table> </td></tr>
+            <tr height=\ "15\">
+                <td height=\ "15\"></td></tr>
+            <tr>
+                <td align=\ "center\" valign=\ "top\">
+                    <!-- 1060px container (white background) Order summary -->
+                    <table border=\ "0\" cellpadding=\ "0\" cellspacing=\ "0\" class=\ "container\" bgcolor=\
+                        "#ffffff\" style=\ "table-layout: fixed; text-align: left; width: 600px;\">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <table width=\ "100%\" bgcolor=\ "#004fa3\" cellpadding=\ "10\">
+                                        <tbody>
+                                            <tr>
+                                                <td width=\ "3%\">
+                                                    <img src=\ "http://localhost/img/Email/summary.gif\" width=\ "21\" height=\
+                                                        "22\" alt=\ "\"> </td>
+                                                <td width=\ "95%\" style=\
+                                                    "font-size: 18px; color: #ffffff;\"> Order summary </td> </tr> </tbody> </table> </td>
+                                </tr>
+                            <tr>
+                                <td class=\ "container-padding\" style=\
+                                    "padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px;\">
+                                    <table width=\ "100%\">
+                                        <tbody>
+                                            <tr>
+                                                <td style=\ "color: #787878; font-size: 14px;\"> Your order number is
+                                                    <span style=\
+                                                        "color: #ed1c2e; font-size: 16px; font-weight: bold \">US80032725</span> </td> </tr>
+                                            <tr height=\ "10\">
+                                                <td colspan=\ "2\" style=\
+                                                    "border-bottom-color: #e8e8e8; border-bottom-width: 1px; border-bottom-style: solid;\"></td> </tr>
+                                            <tr height=\ "10\">
+                                                <!--<td colspan=\"2\">                                        [if lte mso 11]><div style=\"border-bottom-color: transparent; border-bottom-width: 1px; border-bottom-style: solid;\"></div><![endif]--                                    </td>--> </tr> </tbody> </table>
+                                    <table width=\ "100%\" cellspacing=\
+                                        "0\" cellpadding=\ "0\" border=\ "0\" style=\ "margin-top: 10px;\" class=\
+                                        "columns-container\">
+                                        <tbody>
+                                            <tr>
+                                                <td valign=\ "top\" style=\
+                                                    "width: 100%;  font-size: 30px; color: #ed1c2e;\" class=\ "force-col\">
+                                                    <!-- ### COLUMN 1 ### -->
+                                                    <table cellspacing=\ "0\" cellpadding=\ "0\" border=\ "0\" align=\
+                                                        "left\" style=\ "width: 100%\" class=\ "col-2\">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td valign=\ "top\" style=\
+                                                                    "font-size: 30px; color: #ed1c2e;\">
+                                                                    <table cellspacing=\ "0\" cellpadding=\ "0\" border=\
+                                                                        "0\" style=\ "width: 100%\">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width=\ "25\" valign=\ "top\">
+                                                                                    <img width=\ "20\" height=\ "18\" alt=\
+                                                                                        "\" src=\
+                                                                                        "http://localhost/img/Email/address.gif\"> </td>
+                                                                                <td style=\
+                                                                                    "font-size: 16px; color: #787878; white-space: nowrap;\"> Delivery address </td> </tr>
+                                                                            <tr>
+                                                                                <td height=\ "10\" colspan=\ "2\"></td> </tr>
+                                                                            <tr>
+                                                                                <td></td>
+                                                                                <td style=\
+                                                                                    "font-size: 14px; color: #787878; line-height: 1.2;\"> \n 100 m
+                                                                                    <br/>test
+                                                                                    <br/>dallas
+                                                                                    <br/>23443\n  </td> </tr>
+                                                                            <tr>
+                                                                                <td height=\ "15\" colspan=\ "2\"></td> </tr> </tbody> </table>
+                                                                    <table cellspacing=\ "0\" cellpadding=\ "0\" border=\
+                                                                        "0\" style=\ "width: 100%\">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width=\ "25\">
+                                                                                    <img width=\ "22\" height=\ "12\" alt=\
+                                                                                        "\" src=\
+                                                                                        "http://localhost/img/Email/billing.gif\"> </td>
+                                                                                <td style=\
+                                                                                    "font-size: 16px; color: #787878; white-space: nowrap;\"> Delivery method </td> </tr>
+                                                                            <tr>
+                                                                                <td height=\ "10\" colspan=\ "2\"></td> </tr>
+                                                                            <tr>
+                                                                                <td></td>
+                                                                                <td style=\
+                                                                                    "font-size: 14px; color: #787878; line-height: 1.2;\"> Next Day Delivery_UI3, Wednesday, 18
+                                                                                    April 2018 </td> </tr> </tbody>
+                                                                        </table> </td> </tr>
+                                                            <tr>
+                                                                <td height=\ "10\"></td> </tr> </tbody> </table> </td></tr>
+                                            <tr
+                                                height=\ "10\">
+                                                <td colspan=\ "3\" class=\ "change-on600\" style=\
+                                                    "border-bottom-color: #e8e8e8; border-bottom-width: 1px; border-bottom-style: solid;\"></td></tr>
+                            <tr height=\ "10\">
+                                <!--<td colspan=\"3\"><!--[if lte mso 11]><div style=\"border-bottom-color: transparent; border-bottom-width: 1px; border-bottom-style: solid;\"></div><![endif]</td>--></tr>
+                            <tr>
+                                <td class=\ "force-col\" valign=\ "top\" style=\
+                                    "width: 100%; font-size: 30px; color: #ed1c2e;padding-right: 20px;\">
+                                    <table border=\ "0\" cellspacing=\ "0\" cellpadding=\ "0\" align=\ "left\" class=\
+                                        "col-2\">
+                                        <tbody>
+                                            <tr>
+                                                <td valign=\ "top\" width=\ "65\">
+                                                    <img src=\ "http://localhost/img/Email/cash.png\" width=\ "58\" height=\
+                                                        "55\" alt=\ "\"> </td>
+                                                <td>
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style=\
+                                                                    "font-size: 16px; font-weight:bold; color: #787878;\">Foreign Currency</td> </tr> 
+                                                            <tr>
+                                                                <td style=\ "font-size: 14px; color: #787878;\">Mexican Peso</td> </tr> </tbody> </table>
+                                                    </td> </tr> </tbody> </table> </td></tr>
+                            <tr>
+                                <td class=\ "force-col\" valign=\ "top\" style=\
+                                    "width: 100%; font-size: 30px; color: #ed1c2e;\">
+                                    <table border=\ "0\" cellspacing=\ "0\" cellpadding=\ "0\" width=\ "100%\" class=\
+                                        "col-2\" id=\ "last-col-2\">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <table width=\ "100%\">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width=\ "65\"></td>
+                                                                <td>
+                                                                    <table width=\ "100%\">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style=\
+                                                                                    "font-size: 14px; color: #787878; text-align: right;\" width=\ "40%\">16650.00
+                                                                                    <span style=\
+                                                                                        "font-family: Arial; font-weight:bold;\">MXN</span>
+                                                                                </td>
+                                                                                <td style=\
+                                                                                    "font-size: 13px; color: #787878; padding-left: 5px; padding-right: 5px; text-align: center;\">=</td>
+                                                                                <td style=\
+                                                                                    "font-size: 14px; color: #787878; text-align: right;\" width=\ "25%\">1001.68
+                                                                                    <span style=\
+                                                                                        "font-family: Arial; font-weight: bold;\">USD</span>
+                                                                                </td> </tr>
+                                                                            <tr>
+                                                                                <td style=\
+                                                                                    "font-size: 12px; color: #787878; text-align: right;\"> 16.6221 MXN </td>
+                                                                                <td style=\
+                                                                                    "font-size: 13px; color: #787878; padding-left: 5px; padding-right: 5px; text-align: center;\">=</td>
+                                                                                <td style=\
+                                                                                    "font-size: 12px; color: #787878; width: 25%; text-align: right;\">1 USD</td> </tr> </tbody> </table>
+                                                                    </td> </tr> </tbody> </table> </td>
+                                                </tr> </tbody> </table> </td></tr>
+                            <tr
+                                height=\ "10\"> 
+                                <td colspan=\ "3\" class=\ "change-on600\">
+                                    <hr style=\ "border: 0; height: 1px; background: #e8e8e8;\"> </td></tr>
+            <tr height=\ "10\">
+                <!--<td colspan=\"3\">[if lte mso 11]><div style=\"border-bottom-color: transparent; border-bottom-width: 1px; border-bottom-style: solid;\"></div><![endif]</td>--></tr>
+            <tr>
+                <td class=\ "force-col\" valign=\ "top\" style=\ "width: 100%; font-size: 30px; color: #ed1c2e;\">
+                    <table border=\ "0\" cellspacing=\ "0\" cellpadding=\ "0\" align=\ "left\" class=\ "col-2\">
+                        <tbody>
+                            <tr>
+                                <td valign=\ "top\" width=\ "65\">
+                                    <img src=\ "http://localhost/img/Email/home-delivery-free.png\" width=\ "58\" height=\
+                                        "55\" alt=\ "\"> </td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style=\ "font-size: 16px; font-weight:bold; color: #787878;\">Delivery details</td> </tr>
+                                            <tr>
+                                                <td style=\ "font-size: 14px; color: #787878;\">Next Day Delivery_UI3
+                                                    <br/>Wednesday, 18 April 2018
+                                                    <br/>Free Shipping over $1K</td> </tr> </tbody> </table> </td>
+                                </tr> </tbody> </table> </td></tr>
+            <tr>
+                <td class=\ "force-col\" valign=\ "top\" style=\ "width: 100%; font-size: 30px; color: #ed1c2e;\">
+                    <table border=\ "0\" cellspacing=\ "0\" cellpadding=\ "0\" width=\ "100%\" class=\ "col-2\" id=\
+                        "last-col-2\">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <table width=\ "100%\">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <table width=\ "100%\">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td style=\
+                                                                    "font-size: 14px; font-weight:bold; color: #787878; text-align: right;\">FREE</td> </tr> </tbody> </table> </td>
+                                                </tr> </tbody> </table> </td> </tr> </tbody> </table>
+                    </td></tr>
+            <tr height=\ "10\">
+                <td colspan=\ "3\" class=\ "change-on600\" style=\
+                    "border-bottom-color: #e8e8e8; border-bottom-width: 1px; border-bottom-style: solid;\"></td></tr>
+            <tr height=\ "10\">
+                <!--<td colspan=\"3\">[if lte mso 11]><div style=\"border-bottom-color: transparent; border-bottom-width: 1px; border-bottom-style: solid;\"></div><![endif]</td>--></tr>
+            <tr>
+                <td class=\ "force-col\" valign=\ "top\" style=\
+                    "width: 100%; font-size: 30px; color: #ed1c2e;padding-right: 20px;\">
+                    <table border=\ "0\" cellspacing=\ "0\" cellpadding=\ "0\" align=\ "left\" class=\ "col-2\">
+                        <tbody>
+                            <tr>
+                                <td valign=\ "top\" width=\ "65\">
+                                    <img src=\ "http://localhost/img/Email/fee-free.png\" width=\ "58\" height=\ "55\" alt=\
+                                        "\"> </td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style=\ "font-size: 16px; font-weight: bold; color: #787878;\">Service Charge</td> </tr>
+                                            <tr> </tr> </tbody> </table> </td> </tr> </tbody> </table>
+                    </td></tr>
+            <tr>
+                <td class=\ "force-col\" valign=\ "top\" style=\ "width: 100%; font-size: 30px; color: #ed1c2e;\">
+                    <table border=\ "0\" cellspacing=\ "0\" cellpadding=\ "0\" width=\ "100%\" class=\ "col-2\" id=\
+                        "last-col-2\">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <table width=\ "100%\">
+                                        <!-- <tr>                                <td style=\"font-size: 20px;\">&nbsp;</td>                            </tr> -->
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <table width=\ "100%\">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td style=\
+                                                                    "font-size: 14px; font-weight:bold; color: #787878; text-align: right;\"> FREE </td> </tr> </tbody> </table>
+                                                    </td> </tr> </tbody> </table> </td> </tr> </tbody>
+                        </table> </td></tr>
+            <tr height=\ "10\">
+                <!--<td colspan=\"3\"><!--[if lte mso 11]><div style=\"border-bottom-color: transparent; border-bottom-width: 1px; border-bottom-style: solid;\"></div><![endif]</td>--></tr>
+            <tr>
+                <td colspan=\ "3\">
+                    <table width=\ "100%\">
+                        <tbody>
+                            <tr>
+                                <td style=\ "font-size: 16px; font-weight: bold; color: #787878; text-align: right;\">Total: $ 1001.68</td> </tr> </tbody> </table> </td></tr> </tbody>
+            </table>
+            <!--/ end .columns-container--> </td> </tr> </tbody> </table> </td></tr>
+            <tr height=\ "15\">
+                <td height=\ "15\"></td></tr>
+            <tr>\n
+                <td align=\ "center\" valign=\ "top\" bgcolor=\ "#ebebeb\" style=\ "background-color: #e8e8e8;\">\n
+                    <!-- 1060px container (white background) Questions -->\n
+                    <table border=\ "0\" cellpadding=\ "0\" cellspacing=\ "0\" class=\ "container\" bgcolor=\
+                        "#ffffff\" style=\ "table-layout: fixed; text-align: left; width: 600px;\">\n
+                        <tbody>
+                            <tr>\n
+                                <td>\n
+                                    <table width=\ "100%\" bgcolor=\ "#004fa3\" cellpadding=\ "10\">\n
+                                        <tbody>
+                                            <tr>\n
+                                                <td width=\ "3%\">
+                                                    <img src=\ "http://localhost/img/Email/ask.gif\" width=\ "21\" height=\
+                                                        "18\" alt=\ "\">
+                                                </td>\n
+                                                <td width=\ "95%\" style=\ " font-size: 18px; color: #ffffff;\">Have a question about your order?</td>\n </tr>\n </tbody>
+                                    </table>\n </td>\n </tr>\n
+                            <tr>\n
+                                <td class=\ "container-padding\" style=\
+                                    "padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px;word-break:break-all\">\n
+                                    <table border=\ "0\" cellpadding=\ "0\" cellspacing=\ "0\" class=\
+                                        "columns-container\">\n
+                                        <tbody>
+                                            <tr>\n
+                                                <td style=\ "font-size: 13px; color: #787878; line-height: 1.4;\"></td>\n </tr>\n </tbody>
+                                    </table>\n
+                                    <br>\n
+                                    <table border=\ "0\" cellpadding=\ "0\" cellspacing=\ "0\" class=\
+                                        "columns-container\">\n\n
+                                        <tbody>
+                                            <tr>\n
+                                                <td class=\ "force-col\" valign=\ "top\" style=\
+                                                    "width: 100%; font-size: 20px; color: #787878;\">\n\n
+                                                    <!-- ### COLUMN 2 ### -->\n
+                                                    <table border=\ "0\" cellspacing=\ "0\" cellpadding=\ "0\" class=\
+                                                        "col-2\" id=\ "last-col-2\" width=\ "100%\">\n
+                                                        <tbody>
+                                                            <tr>\n
+                                                                <td width=\ "6%\">
+                                                                    <img src=\ "http://localhost/img/Email/faq.gif\" width=\
+                                                                        "23\" height=\ "23\" alt=\ "\">
+                                                                </td>\n
+                                                                <td width=\ "94%\" style=\
+                                                                    "font-size: 16px; color: #787878; white-space: nowrap;\">FAQs</td>\n </tr>\n
+                                                            <tr height=\ "10\">\n
+                                                                <td colspan=\ "2\" style=\
+                                                                    "border-bottom-color: #e8e8e8; border-bottom-width: 1px; border-bottom-style: solid;\"></td>\n </tr>\n
+                                                            <tr height=\ "10\">\n
+                                                                <td colspan=\ "2\">
+                                                                    <!--[if lte mso 11]><div style=\"border-bottom-color: #e8e8e8; border-bottom-width: 1px; border-bottom-style: solid;\"></div><![endif]-->
+                                                                </td>\n </tr>\n
+                                                            <tr>\n
+                                                                <td colspan=\ "2\" style=\
+                                                                    "font-size: 13px; color: #777777; line-height: 1.4;\">\n Find answers to
+                                                                    <a href=\
+                                                                        "https://www.travelex.com/faqs\" style=\
+                                                                        "font-weight: bold; font-size: 13px; color: #3983ce; line-height: 1.4;\">frequently asked questions</a>.\n </td>\n </tr>\n </tbody>
+                                                    </table>\n </td>\n </tr>\n
+                                            <tr height=\ "15\">\n
+                                                <td height=\ "15\"></td>\n </tr>\n\n
+                                            <tr>\n
+                                                <td class=\ "force-col\" valign=\ "top\" style=\
+                                                    "width: 100%; font-size: 20px; color: #787878;\">\n\n
+                                                    <!-- ### COLUMN 1 ### -->\n
+                                                    <table border=\ "0\" cellspacing=\ "0\" cellpadding=\ "0\" align=\
+                                                        "left\" class=\ "col-2\" width=\ "100%\">\n
+                                                        <tbody>
+                                                            <tr>\n
+                                                                <td width=\ "6%\">
+                                                                    <img src=\ "http://localhost/img/Email/call.gif\" width=\
+                                                                        "23\" height=\ "24\" alt=\ "\">
+                                                                </td>\n
+                                                                <td width=\ "94%\" style=\
+                                                                    "font-size: 16px; color: #787878; white-space: nowrap;\">Call us</td>\n </tr>\n
+                                                            <tr height=\ "10\">\n
+                                                                <td colspan=\ "2\" style=\
+                                                                    "border-bottom-color: #e8e8e8; border-bottom-width: 1px; border-bottom-style: solid;\"></td>\n </tr>\n
+                                                            <tr height=\ "10\">\n
+                                                                <td colspan=\ "2\">
+                                                                    <!--[if lte mso 11]><div style=\"border-bottom-color: #e8e8e8; border-bottom-width: 1px; border-bottom-style: solid;\"></div><![endif]-->
+                                                                </td>\n </tr>\n
+                                                            <tr>\n
+                                                                <td colspan=\ "2\">\n
+                                                                    <a style=\
+                                                                        "font-weight: bold; font-size: 13px; color: #3983ce; line-height: 1.4; text-decoration: none;\" href=\ "tel:08458727627\">Please give us a call at 516-300-1622</a>\n </td>\n </tr>\n
+                                                            <tr>\n
+                                                                <td colspan=\ "2\" style=\
+                                                                    "font-size: 13px; color: #777777; line-height: 1.4;\">\n Lines are open 8am-8pm Monday to Friday, and 9am-5pm Saturday
+                                                                    (EST). Calls are recorded for training and security purposes.\n
+                                                                    </td>\n </tr>\n </tbody>
+                                                    </table>\n\n </td>\n </tr>\n
+                                            <tr height=\ "15\">\n
+                                                <td height=\ "15\"></td>\n </tr>\n\n
+                                            <tr>\n
+                                                <td class=\ "force-col\" valign=\ "top\" style=\
+                                                    "width: 100%;  font-size: 20px; color: #787878;\">\n\n
+                                                    <!-- ### COLUMN 2 ### -->\n
+                                                    <table border=\ "0\" cellspacing=\ "0\" cellpadding=\ "0\" class=\
+                                                        "col-2\" id=\ "last-col-2\" width=\ "100%\">\n
+                                                        <tbody>
+                                                            <tr>\n
+                                                                <td width=\ "6%\">
+                                                                    <img src=\ "http://localhost/img/Email/mail.gif\" width=\
+                                                                        "23\" height=\ "19\" alt=\ "\">
+                                                                </td>\n
+                                                                <td width=\ "94%\" style=\
+                                                                    "font-size: 16px; color: #787878; white-space: nowrap;\">Email us</td>\n </tr>\n
+                                                            <tr height=\ "10\">\n
+                                                                <td colspan=\ "2\" style=\
+                                                                    "border-bottom-color: #e8e8e8; border-bottom-width: 1px; border-bottom-style: solid;\"></td>\n </tr>\n
+                                                            <tr height=\ "10\">\n
+                                                                <td colspan=\ "2\">
+                                                                    <!--[if lte mso 11]><div style=\"border-bottom-color: #e8e8e8; border-bottom-width: 1px; border-bottom-style: solid;\"></div><![endif]-->
+                                                                </td>\n </tr>\n
+                                                            <tr>\n
+                                                                <td colspan=\ "2\">\n
+                                                                    <a style=\
+                                                                        "font-weight: bold; font-size: 13px; color: #3983ce; line-height: 1.4;\" href=\ "mailto:Online.Orders.USA@travelex.com\">Online.Orders.USA@travelex.com</a>\n </td>\n </tr>\n
+                                                            <tr>\n
+                                                                <td colspan=\ "2\" style=\
+                                                                    "font-size: 13px; color: #777777; line-height: 1.4;\">\n Click on the link above or simply reply to this email.
+                                                                    For your security, please do not send credit or debit
+                                                                    card information by e-mail.\n </td>\n </tr>\n </tbody>
+                                                    </table>\n </td>\n </tr>\n\n\n\n </tbody>
+                                    </table>
+                                    <!--/ end .columns-container-->\n </td>\n </tr>\n </tbody>
+                    </table>\n </td>\n </tr>
+            <tr height=\ "15\">
+                <td height=\ "15\"></td></tr>
+            <tr height=\ "15\">
+                <td height=\ "15\"></td></tr>
+            <!-- 1060px container (white background) Footer mobile -->\n
+            <tr>\n
+                <td align=\ "center\" valign=\ "top\" bgcolor=\ "#ebebeb\" style=\ "background-color: #e8e8e8;\">\n\n
+                    <table border=\ "0\" cellpadding=\ "20\" cellspacing=\ "0\" class=\ "container\" bgcolor=\
+                        "#003368\" style=\ "width: 600px;\">\n
+                        <tbody>
+                            <tr>\n
+                                <td style=\ "width: 100%; color: #ffffff;\">\n
+                                    <table border=\ "0\" bgcolor=\ "#003368\" cellpadding=\ "0\" cellspacing=\ "0\" style=\
+                                        "font-size: 13px;color: #ffffff; text-align: left; table-layout: fixed;\" align=\ "center\" width=\ "100%\">\n
+                                        <tbody>
+                                            <tr>\n
+                                                <td>©2015 Travelex Currency Service Inc. - 122 E 42nd St, Suite 2800, New York,
+                                                    NY 10168</td>\n </tr>\n
+                                            <tr>\n
+                                                <td height=\ "20\"></td>\n </tr>\n
+                                            <tr>\n
+                                                <td>
+                                                    <a href=\ "https://www.travelex.com/legal/terms-of-use\" style=\
+                                                        "text-decoration:none\">
+                                                        <span style=\ "font-size: 13px;color: #ffffff;\">Terms of Use</span>
+                                                    </a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                                                    <a href=\
+                                                        "https://www.travelex.com/legal/privacy-policy\" style=\ "text-decoration:none\">
+                                                        <span style=\ "font-size: 13px;color: #ffffff;\">Privacy Policy</span>
+                                                    </a>
+                                                </td>\n </tr> \n
+                                            <!-- <tr class=\"from600table\" style=\"max-height: 0; font-size: 0;\">\n                                        <td style=\"width: 100%; color: #ffffff;\" align=\"left\">\n                                            © 2015 Travelex Currency Services Inc and its licensors. All rights reserved.\n                                        </td>\n                                    </tr> -->\n\n </tbody>
+                                    </table>\n\n\n </td>\n </tr>\n 122 E 42nd St, Suite 2800, New York, NY 10168</tbody></table></body>
+
 </html>

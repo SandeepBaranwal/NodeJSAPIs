@@ -1,3 +1,5 @@
 node_modules/
 *.txt
-//start.html
+
+# package.json file
+*package-lock.json

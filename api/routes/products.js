@@ -1,9 +1,23 @@
 
 const express = require('express');
 const router = express.Router();
-
 const mongoose = require('mongoose');
+const multer = require('multer');
+
+const storage = multer.diskStorage({
+    destination:function(req,file,cb){
+     cb(null,'./upload/');   
+    },
+    filename:function(req, file, cb){
+        cb(null,new Date().toString() +  file.filename);
+    }
+});
+
+const upload = multer({dest:'uploads/'});
+
 const Product = require('../Model/product');
+
+
 
 router.get('/', (req, res, next) => {
     Product.find()
@@ -41,7 +55,8 @@ router.get('/', (req, res, next) => {
      })
 });
 
-router.post('/', (req, res, next) => {
+router.post('/',upload.single('productImage'),  (req, res, next) => {
+    console.log(req.file);
     const product = new Product({
         _id: new mongoose.Types.ObjectId(),
         name: req.body.name,
@@ -100,7 +115,13 @@ router.post('/', (req, res, next) => {
         Product.update({ _id: id }, { $set: updateOps })
             .exec()
             .then(result => {
-                res.status(200).json(result);
+                res.status(200).json({
+                    message:"Product Updated",
+                    request:{
+                        type:"Get",
+                        url:"http://localhost/product/"+id
+                    }
+                });
             })
             .catch(err => {
                 console.log(err.message);

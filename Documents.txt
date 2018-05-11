@@ -202,3 +202,8 @@ app.use((req,res,next)=>{
 
 /************************Session 5 End***********************/
 npm install --save mongoose
+
+/************************ Session 9 ************************/
+Uploading an Image| Creating a new web api with node js 
+
+npm install --save multer
